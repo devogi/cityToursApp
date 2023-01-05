@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KeJ-x3-0mt">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cityToursApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3dz-Gr-HhO">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3dz-Gr-HhO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BCe-PT-v8a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3dz-Gr-HhO" secondAttribute="bottom" id="l4u-HQ-igC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3dz-Gr-HhO" secondAttribute="trailing" id="puB-Cs-5cp"/>
+                            <constraint firstItem="3dz-Gr-HhO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vNn-W5-VeK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kxf-4g-Qin"/>
+                    <connections>
+                        <outlet property="firstTV" destination="3dz-Gr-HhO" id="YrI-P7-DEF"/>
+                        <segue destination="Av7-KI-DuC" kind="show" identifier="toVC2" id="fEn-Rf-HQ3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--VC2-->
+        <scene sceneID="NZy-mK-PXb">
+            <objects>
+                <viewController id="Av7-KI-DuC" customClass="VC2" customModule="cityToursApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LaB-QA-FRt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bt2-xz-7ej">
+                                <rect key="frame" x="21" y="118" width="351" height="229"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X0-qN-jcw">
+                                <rect key="frame" x="40" y="419" width="313" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="x52-Jx-r1c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImY-BJ-fFt">
+                                <rect key="frame" x="85" y="518" width="237" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fkP-rD-VPd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7X0-qN-jcw" firstAttribute="leading" secondItem="fkP-rD-VPd" secondAttribute="leading" constant="40" id="07d-eJ-jaO"/>
+                            <constraint firstItem="7X0-qN-jcw" firstAttribute="top" secondItem="bt2-xz-7ej" secondAttribute="bottom" constant="72" id="B3e-DA-3nx"/>
+                            <constraint firstItem="bt2-xz-7ej" firstAttribute="leading" secondItem="fkP-rD-VPd" secondAttribute="leading" constant="21" id="ELH-Nf-dvW"/>
+                            <constraint firstItem="fkP-rD-VPd" firstAttribute="bottom" secondItem="ImY-BJ-fFt" secondAttribute="bottom" constant="279" id="Hwg-vK-Rhn"/>
+                            <constraint firstItem="ImY-BJ-fFt" firstAttribute="top" secondItem="7X0-qN-jcw" secondAttribute="bottom" constant="8" id="Qld-pj-Tc8"/>
+                            <constraint firstItem="ImY-BJ-fFt" firstAttribute="leading" secondItem="fkP-rD-VPd" secondAttribute="leading" constant="85" id="Wx2-95-WbO"/>
+                            <constraint firstItem="bt2-xz-7ej" firstAttribute="centerX" secondItem="7X0-qN-jcw" secondAttribute="centerX" id="jM6-HU-ShN"/>
+                            <constraint firstItem="fkP-rD-VPd" firstAttribute="trailing" secondItem="ImY-BJ-fFt" secondAttribute="trailing" constant="71" id="n8J-Pq-mkb"/>
+                            <constraint firstItem="bt2-xz-7ej" firstAttribute="centerX" secondItem="LaB-QA-FRt" secondAttribute="centerX" id="tRU-j2-2iC"/>
+                            <constraint firstItem="bt2-xz-7ej" firstAttribute="top" secondItem="fkP-rD-VPd" secondAttribute="top" constant="15" id="uxa-kH-LlB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tdz-iJ-3jD"/>
+                    <connections>
+                        <outlet property="ImageView" destination="bt2-xz-7ej" id="1ug-r6-8cA"/>
+                        <outlet property="cityLabel" destination="7X0-qN-jcw" id="ac2-le-qiv"/>
+                        <outlet property="regionLabel" destination="ImY-BJ-fFt" id="rz8-UH-qW4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cA-jE-Zdu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.4351145038167" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DAN-1j-MJD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KeJ-x3-0mt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="31A-mr-ogs">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2mx-OB-dkw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yst-a1-lQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
